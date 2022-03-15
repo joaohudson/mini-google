@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background: black;
+                text-align: center;
+                align-items: center;
+            }
+            h1{
+                margin-top: 120px;
+                margin-bottom: 70px;
+                color: darkturquoise;
+            }
+            input{
+                background-color: #222222;
+                color: darkturquoise;
+            }
+            input:disabled{
+                background-color: black;
+            }
+            a, p{
+                color: darkturquoise;
+            }
+            .item{
+                margin-top: 10px;
+                border-color: darkturquoise;
+                border-style: solid;
+                border-width: 1px;
+                width: 50%;
+                margin-left: 25%;
+            }
+            #searchBar{
+                width: 50%;
+                margin-bottom: 80px;
+            }
+            #searchButton{
+                width: 90px;
+            }
+        </style>
+        <title>Mini Google</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Mini Google</h1>
+        <input type="textfield" id="searchBar"/>
+        <input type="submit" value="Search" id="searchButton"/>
+        <div id="contentDiv">
+        </div>
+        <script src="main.js" type="text/javascript" ></script>
+    </body>
+</html>
