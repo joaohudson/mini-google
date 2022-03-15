@@ -1,10 +1,12 @@
 [
     {
         "name": "Scriptable Gallery",
-        "link": "/sites/scriptable-gallery"
+        "link": "/sites/scriptable-gallery",
+        "icon": "/sites/scriptable-gallery/icon.png"
     },
     {
         "name": "Ball Shot",
-        "link": "/sites/ball-shot"
+        "link": "/sites/ball-shot",
+        "icon": "/sites/ball-shot/images/night.png"
     }
 ]

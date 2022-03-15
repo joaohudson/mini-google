@@ -6,13 +6,20 @@ const searchBar = document.getElementById('searchBar');
 
 const BASE_URL = window.location.href + 'api/';
 
-function addSite(name, link){
+function addSite(name, link, icon){
     const div = document.createElement('div');
     div.className = 'item';
     
     const a = document.createElement('a');
     a.href = link;
     a.innerText = name;
+
+    if(icon){
+        const img = document.createElement('img');
+        img.src = icon;
+        img.className = 'iconSite';
+        div.appendChild(img);
+    }
     
     div.appendChild(a);
     contentDiv.appendChild(div);
@@ -42,7 +49,7 @@ async function delay(time){
     return new Promise((res) => setTimeout(res, time));
 }
 
-searchButton.onclick = async () => {
+async function search(){
 
     //disbale button for search
     enableSearchButton(false);
@@ -73,11 +80,13 @@ searchButton.onclick = async () => {
         return;
     }
 
-    for(const {name, link} of sites){
-        addSite(name, link);
+    for(const {name, link, icon} of sites){
+        addSite(name, link, icon);
     }
 
     enableSearchButton(true);
-};
+}
+
+searchButton.onclick = search;
 
 })();
