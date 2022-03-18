@@ -56,7 +56,7 @@ async function search(){
 
     const filter = searchBar.value;
     let response = {};
-    
+
     try { 
         response = await fetch(BASE_URL + 'search?filter=' + filter);
     }catch(e){
@@ -88,5 +88,12 @@ async function search(){
 }
 
 searchButton.onclick = search;
+
+searchBar.onkeydown = (e) => {
+    if(e.key == 'Enter'){
+        e.preventDefault();
+        search();
+    }
+};
 
 })();
