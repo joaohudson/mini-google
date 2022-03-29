@@ -1,10 +1,11 @@
+require('dotenv/config');
 const express = require('express');
 const path = require('path');
 const sites = require('./sites.json');
 const app = express();
 
 const CLIENT_PATH = path.join(__dirname, 'client');
-const PORT = 8080;
+const PORT = process.env.PORT;
 
 app.use(express.static(CLIENT_PATH));
 
@@ -18,7 +19,7 @@ app.get('/api/search', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log('Client listening on port ' + PORT);
+    console.log('Server listening on port ' + PORT);
 });
 
 async function search(filter){
