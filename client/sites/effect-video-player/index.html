@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background: #0F0F0F;
+            }
+            canvas{
+                width: 60%;
+                height: auto;
+            }
+            h1{
+                color: rgb(53, 248, 79);
+                font-weight: bold;
+            }
+            .center{
+                text-align: center;
+                align-items: center;
+            }
+            #videoInputButtonDiv{
+                margin-top: 30px;
+            }
+            #videoInputButton{
+                border-radius: 20%;
+                padding: 10px 10px 10px 10px;
+                background: rgb(53, 248, 79);
+                color: black;
+                font-weight: bold;
+            }
+            #videoInputMessage{
+                font-weight: bold;
+                margin-bottom: 20px;
+                color: rgb(53, 248, 79);
+            }
+            #videoInput{
+                visibility: hidden;
+            }
+            #filtersSelect{
+                background: rgb(53, 248, 79);
+                color: black;
+                margin-top: 20px;
+                font-weight: bold;
+            }
+            #effectLabel{
+                color:rgb(53, 248, 79);
+                font-weight: bold;
+                margin-right: 30px;
+            }
+        </style>
+        <link href="favicon.png" rel="icon">
+        <title>Effect Video Player</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div class="center">
+            <h1>Effect Video Player</h1>
+        </div>
+        <div class="center" id="videoCanvas">
+            <canvas id="canvas" width="640" height="420"></canvas>
+        </div>
+        <div class="center">
+            <div class="center">
+                <input type="checkbox" id="effectCheckbox" checked="true">
+                <label id="effectLabel">Effect Progress Bar</label>
+                <select id="filtersSelect">
+                    <option selected disabled>Filters</option>
+                </select>
+            </div>
+            <div class="center" id="videoInputButtonDiv">
+                <p id="videoInputMessage">No video selected</p>
+                <label id="videoInputButton" for="videoInput">Select a video</label>
+            </div>
+            <input id="videoInput" type="file" accept="video/*">
+        </div>
+        <script src="filters.js" type="text/javascript"></script>
+        <script src="main.js" type="text/javascript"></script>
+    </body>
+</html>

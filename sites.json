@@ -8,5 +8,10 @@
         "name": "Ball Shot",
         "link": "/sites/ball-shot",
         "icon": "/sites/ball-shot/images/night.png"
-    }
+    },
+	{
+		"name": "Effect Video Player",
+		"link": "/sites/effect-video-player",
+		"icon": "sites/effect-video-player/favicon.png"
+	}
 ]
