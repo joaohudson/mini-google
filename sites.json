@@ -12,6 +12,11 @@
 	{
 		"name": "Effect Video Player",
 		"link": "/sites/effect-video-player",
-		"icon": "sites/effect-video-player/favicon.png"
+		"icon": "/sites/effect-video-player/favicon.png"
+	},
+	{
+		"name": "Password Generator",
+		"link": "/sites/password-generator",
+		"icon": "/sites/password-generator/icon.png"
 	}
 ]
