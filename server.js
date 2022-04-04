@@ -18,6 +18,10 @@ app.get('/api/search', async (req, res) => {
     }
 });
 
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'not-found.html'));
+});
+
 app.listen(PORT, () => {
     console.log('Server listening on port ' + PORT);
 });
