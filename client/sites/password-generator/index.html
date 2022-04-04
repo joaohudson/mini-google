@@ -8,7 +8,6 @@
             }
             label{
                 color: darkturquoise;
-                font-size: 28px;
             }
             button{
                 background-color: black;
@@ -21,10 +20,19 @@
             div{
                 margin-top: 100px;
             }
-            #passwordDiv{
+            #passwordBox{
                 background-color: #222222;
                 box-sizing: content-box;
                 padding: 20px 20px;
+            }
+            #passwordLabel{
+                cursor: pointer;
+                font-size: 28px;
+            }
+            #infoDiv{
+                margin-top: 30px;
+                margin-bottom: -45px;
+                display: none;
             }
         </style>
         <link href="icon.png" rel="icon">
@@ -36,9 +44,12 @@
             <h1>Password Generator</h1>
         </div>
         <div>
-            <box id="passwordDiv">
+            <box id="passwordBox">
                 <label id="passwordLabel"> </label>
             </box>
+        </div>
+        <div id="infoDiv">
+            <label>Copied!</label>
         </div>
         <div>
             <button id="generatorButton">Generate</button>
