@@ -19,7 +19,7 @@ app.get('/api/search', async (req, res) => {
 });
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'not-found.html'));
+    res.status(404).sendFile(path.join(__dirname, 'not-found.html'));
 });
 
 app.listen(PORT, () => {
