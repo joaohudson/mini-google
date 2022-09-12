@@ -19,7 +19,18 @@ app.get('/api/search', async (req, res) => {
 });
 
 app.get('/api/ip', async (req, res) => {
-    res.send(req.socket.remoteAddress);
+    const host = req.headers['host'];
+    if(!host){
+        res.send().status(400);
+        return;
+    }
+    const tokens = host.split(':');
+    if(tokens.length != 2){
+        res.send().status(400);
+        return;
+    }
+
+    res.send(tokens[1]);
 });
 
 app.get('*', (req, res) => {
