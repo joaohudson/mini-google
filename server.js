@@ -19,7 +19,7 @@ app.get('/api/search', async (req, res) => {
 });
 
 app.get('/api/ip', async (req, res) => {
-    res.send(request.socket.remoteAddress);
+    res.send(req.socket.remoteAddress);
 });
 
 app.get('*', (req, res) => {
