@@ -18,5 +18,10 @@
 		"name": "Password Generator",
 		"link": "/sites/password-generator",
 		"icon": "/sites/password-generator/icon.png"
-	}
+	},
+    {
+        "name": "My IP",
+        "link": "/sites/my-ip",
+        "icon": "/sites/my-ip/icon.png"
+    }
 ]

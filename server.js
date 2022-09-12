@@ -18,6 +18,10 @@ app.get('/api/search', async (req, res) => {
     }
 });
 
+app.get('/api/ip', async (req, res) => {
+    res.send(req.hostname);
+});
+
 app.get('*', (req, res) => {
     res.status(404).sendFile(path.join(__dirname, 'not-found.html'));
 });
